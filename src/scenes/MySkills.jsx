@@ -2,7 +2,8 @@ import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 
-const skills = ["Data Structures", "Algorithms", "Java", "HTML", "CSS", "Javascript"];
+const skills = ["Data Structures and Algorithms", "Java language", "HTML, CSS and Javascript", "Mongo-DB, Express.js, React.js and Node.js", "Redux Toolkit", "Python and Machine Learning"
+];
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -39,11 +40,11 @@ const MySkills = () => {
               <img
                 alt="skills"
                 className="z-10"
-                src="assets/skills-image.png"
+                src="https://res.cloudinary.com/deqvxfp7f/image/upload/v1708677385/Portfolio/skills-image_npwf0b.png"
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src="assets/skills-image.png" />
+            <img alt="skills" className="z-10" src="https://res.cloudinary.com/deqvxfp7f/image/upload/v1708677385/Portfolio/skills-image_npwf0b.png" />
           )}
         </div>
       </div>

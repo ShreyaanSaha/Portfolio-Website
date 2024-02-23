@@ -43,19 +43,16 @@ const Contact = () => {
 
       {/* FORM & IMAGE */}
       <div className="md:flex md:justify-between gap-16 mt-5">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          className="basis-1/2 flex justify-center"
+        <div
+          className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
+          before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
         >
-          <img src="../assets/contact-image.jpeg" alt="contact" />
-        </motion.div>
+          <img
+            alt="skills"
+            className="z-10"
+            src="https://res.cloudinary.com/deqvxfp7f/image/upload/v1708677384/Portfolio/contact-image_a6pfls.jpg"
+          />
+        </div>
 
         <motion.div
           initial="hidden"

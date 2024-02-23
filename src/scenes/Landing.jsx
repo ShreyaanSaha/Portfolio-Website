@@ -20,14 +20,14 @@ const Landing = ({ setSelectedPage }) => {
             <img
               alt="profile"
               className="rounded-full hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
-              src="assets/Shreyaan.jpg"
+              src="https://res.cloudinary.com/deqvxfp7f/image/upload/v1708677385/Portfolio/Shreyaan_sdomhk.jpg"
             />
           </div>
         ) : (
           <img
             alt="profile"
             className="rounded-full z-10 w-full max-w-[400px] md:max-w-[600px]"
-            src="assets/Shreyaan.jpg"
+            src="https://res.cloudinary.com/deqvxfp7f/image/upload/v1708677385/Portfolio/Shreyaan_sdomhk.jpg"
           />
         )}
       </div>
