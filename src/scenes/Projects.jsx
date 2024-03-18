@@ -2,40 +2,6 @@ import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import { projects } from "../data";
 
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const projectVariant = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1 },
-};
-
-const Project = ({ title }) => {
-  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
-  const projectTitle = title.split(" ").join("-").toLowerCase();
-
-  return (
-    <motion.div variants={projectVariant} className="relative">
-      <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
-      </div>
-      <img src={`../assets/${title}.png`} alt={title} />
-    </motion.div>
-  );
-};
-
 const Projects = () => {
   return (
     <section id="projects" className="pt-24 pb-24">
@@ -70,8 +36,8 @@ const Projects = () => {
           <a
             href={project.link}
             key={project.image}
-            className="sm:w-1/2 w-100 p-4">
-            <div className="flex relative">
+            className="sm:w-1/2 w-100 p-4 rounded-md">
+            <div className="flex relative rounded-md">
               <img
                 alt="gallery"
                 className="absolute inset-0 w-full h-full object-cover object-center"

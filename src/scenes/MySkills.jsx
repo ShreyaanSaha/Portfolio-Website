@@ -1,12 +1,11 @@
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-
-const skills = ["Data Structures and Algorithms", "Java language", "HTML, CSS and Javascript", "Mongo-DB, Express.js, React.js and Node.js", "Redux Toolkit", "Python and Machine Learning"
-];
+import { skills } from "../skills";
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
+
   return (
     <section id="skills" className="pt-10 pb-10">
       {/* HEADER AND IMAGE SECTION */}
@@ -50,23 +49,20 @@ const MySkills = () => {
       </div>
 
       {/* SKILLS */}
-      <div className="container px-5 py-10 mx-auto flex justify-center">
-        <div className="text-center mb-20">
-          {/* ... */}
-        </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          {skills.map((skill) => (
-            <div key={skill} className="p-2 sm:w-1/2 w-full">
-              <div className="bg-blue rounded flex p-4 h-full items-center ">
-                <div className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
-                <span className="title-font font-medium text-white hover:text-black">
-                  {skill}
-                </span>
-              </div>
+      <div name="experience" className= "justify-center w-full h-screen">
+        <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-ful text-white">
+            <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+                {
+                    skills.map(({ id, src, title, style }) => (
+                        <div key={id} className={`shadow-md hover:scale-110 duration-500 py-2 rounded-lg ${style}`}>
+                          <img src={src} alt={title} className="h-50 w-20 mx-auto" />
+                          <p className="mt-4">{title}</p>
+                        </div>
+                      ))
+                }
             </div>
-          ))}
         </div>
-      </div>
+    </div>
     </section>
   );
 };
