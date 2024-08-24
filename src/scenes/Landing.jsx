@@ -56,7 +56,7 @@ const Landing = ({ setSelectedPage }) => {
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-          Pre-final year undergrad at Jadavpur University.<br />
+          Final year undergrad at Jadavpur University.<br />
           An avid learner, with a keen interest in tech, design, finance and productivity.
           </p>
         </motion.div>
